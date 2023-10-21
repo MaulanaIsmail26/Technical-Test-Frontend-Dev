@@ -1,0 +1,192 @@
+/* *<---------- CUSTOM PROPERTY ---------->* */
+
+@import url('https: //fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+:root {
+
+  /* *< COLORING >* */
+
+  --primary: #4EB7F2;
+  --main-background: #F7F9FA;
+  --white: #FFFFFF;
+  --white-2: #FAFAFA;
+  --gray: #C4C4C4;
+  --light-gray: #AAAAAA;
+  --blue: #064061;
+  --light-blue: #4EB7F2;
+  --rose: #F3735E;
+  --mint: #7DD97B;
+
+  /* *< END OF COLORING >* */
+
+  /* *< TYPOGRAPHY >* */
+
+  /* FONT-FAMILY */
+  --ff-montserrat: 'Montserrat', sans-serif;
+
+  /* FONT SIZE */
+  --fs-1: 24px;
+  --fs-2: 22px;
+  --fs-3: 20px;
+  --fs-4: 18px;
+  --fs-5: 16px;
+  --fs-6: 14px;
+  --fs-7: 12px;
+
+  /* FONT WEIGHT */
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+
+  /* *< END OF TYPOGRAPHY >* */
+}
+
+/* *<---------- END OF CUSTOM PROPERTY ---------->* */
+
+
+
+/* *<---------- RESET ---------->* */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  font: inherit;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--white);
+}
+
+:focus {
+  outline-color: var(--primary);
+}
+
+#dashboard {
+  font-family: var(--ff-montserrat);
+  scroll-behavior: smooth;
+}
+
+#dashboard {
+  background: var(--main-background);
+}
+
+/* *<---------- END OF RESET ---------->* */
+
+
+/* *<---------- CONTAINER ---------->* */
+
+#dashboard .container-fluid {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* *<---------- END OF CONTAINER ---------->* */
+
+
+/* *<---------- SIDE BAR ---------->* */
+
+#dashboard .container-fluid .sideBar {
+  height: 100vh;
+  padding: 0;
+  background-color: var(--white);
+  padding: 35px 0;
+}
+
+#dashboard .sideBar .picture {
+  width: 80%;
+  height: 70px;
+  margin: auto;
+  background-color: var(--gray);
+  margin-bottom: 20px;
+}
+
+#dashboard .sideBar .picture img {
+  height: 45%;
+}
+
+#dashboard .sideBar .profile {
+  width: 95%;
+  height: 80px;
+  margin: auto;
+  border-radius: 12px;
+  background-color: var(--white-2);
+  margin-bottom: 20px;
+}
+
+#dashboard .sideBar .profile .frame {
+  height: 80px;
+}
+
+#dashboard .sideBar .profile img {
+  width: 53px;
+}
+
+#dashboard .sideBar .profile .username {
+  margin-left: -10px;
+}
+
+#dashboard .sideBar .profile .username p:nth-child(1) {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-600);
+  color: var(--blue);
+  margin: 0;
+}
+
+#dashboard .sideBar .profile .username p:nth-child(2) {
+  font-size: var(--fs-5);
+  color: var(--light-gray);
+  margin: 0;
+}
+
+#dashboard .sideBar .menu {
+  width: 100%;
+  height: max-content;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+#dashboard .sideBar .menu .dashboard {
+  padding: 7px;
+  border-right: 5px solid var(--light-blue);
+  cursor: pointer;
+}
+
+#dashboard .sideBar .menu .dashboard img {
+  width: 30px;
+}
+
+#dashboard .sideBar .menu .dashboard p {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-600);
+  color: var(--light-blue);
+  margin: 0;
+}
+
+/* *<---------- END OF SIDE BAR ---------->* */
