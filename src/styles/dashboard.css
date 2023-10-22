@@ -8,6 +8,7 @@
 
   --primary: #4EB7F2;
   --main-background: #F7F9FA;
+  --border-color: #F1F1F1;
   --white: #FFFFFF;
   --white-2: #FAFAFA;
   --gray: #C4C4C4;
@@ -40,6 +41,12 @@
   --fw-600: 600;
 
   /* *< END OF TYPOGRAPHY >* */
+  
+  /* *< BORDER >* */
+
+  --border-radius: 12px;
+
+  /* *< END OF BORDER >* */
 }
 
 /* *<---------- END OF CUSTOM PROPERTY ---------->* */
@@ -114,7 +121,6 @@ input, textarea {
 
 #dashboard .container-fluid .sideBar {
   height: 100vh;
-  padding: 0;
   background-color: var(--white);
   padding: 35px 0;
 }
@@ -135,7 +141,7 @@ input, textarea {
   width: 95%;
   height: 80px;
   margin: auto;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   background-color: var(--white-2);
   margin-bottom: 20px;
 }
@@ -169,7 +175,7 @@ input, textarea {
   width: 100%;
   height: max-content;
   padding: 10px 20px;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
 }
 
 #dashboard .sideBar .menu .dashboard {
@@ -190,3 +196,147 @@ input, textarea {
 }
 
 /* *<---------- END OF SIDE BAR ---------->* */
+
+
+/* *<---------- MAIN CONTENT ---------->* */
+
+#dashboard .container-fluid .mainContent {
+  padding: 0;
+}
+
+#dashboard .mainContent .row:nth-child(1) {
+  height: 100vh;
+  padding: 35px 0;
+  margin: 0;
+}
+
+#dashboard .mainContent .leftSide {
+  padding: 0 0 0 30px;
+}
+
+/* LEFT SIDE */
+/* ALL EXPENSES */
+
+#dashboard .mainContent .leftSide .AllExpensesCard {
+  width: 100%;
+  height: max-content;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .header {
+  margin-bottom: 15px;
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .header .title {
+  font-size: var(--fs-3);
+  margin: 0;
+  font-weight: var(--fw-600);
+  color: var(--blue);
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .header .btn-dropdown {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--fs-6);
+  color: var(--blue);
+  padding: 10px 15px;
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .header .dropdown-menu {
+  border: 1px solid var(--border-color);
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .header .dropdown-menu li {
+  cursor: pointer;
+  font-size: var(--fs-6);
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .header .dropdown-menu li:hover {
+  background-color: var(--light-blue);
+  color: var(--white);
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .card {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .card .card-header {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .card img {
+  width: 55px;
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .card .card-header h6 {
+  margin: 0;
+  color: var(--blue);
+  cursor: pointer;
+  font-weight: var(--fw-600);
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .card .card-content {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .card .card-content p:nth-child(1) {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  color: var(--blue);
+  margin-bottom: 4px;
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .card .card-content p:nth-child(2) {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  margin-bottom: 12px;
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .card .card-content h4 {
+  font-weight: var(--fw-600);
+  color: var(--light-blue);
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .col-4:nth-child(1) .card {
+  background-color: var(--light-blue);
+  border: 0;
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .col-4:nth-child(1) .card .card-header h6 {
+  color: var(--white);
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .col-4:nth-child(1) .card .card-content p:nth-child(1) {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .col-4:nth-child(1) .card .card-content p:nth-child(2) {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  margin-bottom: 12px;
+}
+
+#dashboard .mainContent .leftSide .AllExpensesCard .content .col-4:nth-child(1) .card .card-content h4 {
+  color: var(--white);
+}
+
+/* END OF ALL EXPENSES */
+/* END OF LEFT SIDE */
+
+/* *<---------- END OF MAIN CONTENT ---------->* */
