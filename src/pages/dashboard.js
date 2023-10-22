@@ -4,6 +4,7 @@ import "./../styles/dashboard.css";
 import { Link } from "react-router-dom";
 
 import CardExpenses from "../components/molecules/card-Expenses";
+import TransactionList from "../components/molecules/transaction-list";
 
 export default function Dashboard() {
   return (
@@ -130,11 +131,137 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </div>
+
+                {/* QUICK INVOICE SECTION */}
+                <div className="quickInvoiceCard">
+                  {/* HEADER */}
+                  <div className="header d-flex justify-content-between align-items-center">
+                    {/* TITLE */}
+                    <p className="title">Quick Invoice</p>
+
+                    {/* ADD */}
+                    <img
+                      src={require("./../asset/icons/add-icon.webp")}
+                      alt="add-icon"
+                    />
+                  </div>
+
+                  {/* LATEST TRANSACTION */}
+                  <div className="latestTransaction">
+                    <p className="title">Latest Transaction</p>
+                    <div className="list">
+                      <ul>
+                        <TransactionList
+                          username="Madrani Andi"
+                          email="Madraniadi20@gmail"
+                        />
+                        <TransactionList
+                          username="Josua Nunito"
+                          email="Josh Nunito@gmail.com"
+                        />
+                        <TransactionList
+                          username="Madrani Andi"
+                          email="Madraniadi20@gmail"
+                        />
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* MONEY SEND FORM */}
+                  <div className="moneySendForm">
+                    {/* FORM */}
+                    <div className="row p-0">
+                      <div className="col-6">
+                        <label for="name" className="form-label">
+                          Customer name
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control input"
+                          id="name"
+                          placeholder="Type customer name"
+                        />
+                      </div>
+                      <div className="col-6">
+                        <label for="email" className="form-label">
+                          Customer Email
+                        </label>
+                        <input
+                          type="email"
+                          className="form-control input"
+                          id="email"
+                          placeholder="Type customer email"
+                        />
+                      </div>
+                    </div>
+                    <div className="row p-0 m-0">
+                      <div className="col-6">
+                        <label for="item" className="form-label">
+                          Item name
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control input"
+                          id="item"
+                          placeholder="Type customer name"
+                        />
+                      </div>
+                      <div className="col-6">
+                        <label for="mount" className="form-label">
+                          Item mount
+                        </label>
+
+                        <div className="input-group">
+                          <button
+                            className="btn btn-outline-secondary dropdown-toggle btn-mount"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            USD
+                          </button>
+                          <ul className="dropdown-menu">
+                            <li className="dropdown-item">USD</li>
+                          </ul>
+                          <input
+                            type="text"
+                            id="mount"
+                            className="form-control input-mount"
+                            aria-label="Text input with dropdown button"
+                            placeholder="Type customer item mount"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* BUTTON */}
+                    <div className="button d-flex justify-content-between">
+                      <button type="button" className="btn btn-addMore">
+                        Add more details
+                      </button>
+                      <button type="button" className="btn btn-send">
+                        Send Money
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </main>
         </div>
       </div>
+      {/* STYLE FOR SCROLLBAR */}
+      <style>
+        {`
+          ::-webkit-scrollbar {
+            width: 0em;
+            height: 0em;
+          }
+          ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+        `}
+      </style>
     </div>
   );
 }

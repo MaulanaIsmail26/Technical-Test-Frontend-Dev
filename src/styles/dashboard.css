@@ -11,10 +11,12 @@
   --border-color: #F1F1F1;
   --white: #FFFFFF;
   --white-2: #FAFAFA;
+  --white-3: #F1F1F1;
   --gray: #C4C4C4;
   --light-gray: #AAAAAA;
   --blue: #064061;
   --light-blue: #4EB7F2;
+  --light-blue-hover: #479ed1;
   --rose: #F3735E;
   --mint: #7DD97B;
 
@@ -202,10 +204,11 @@ input, textarea {
 
 #dashboard .container-fluid .mainContent {
   padding: 0;
+  height: 100vh;
+  overflow: auto;
 }
 
 #dashboard .mainContent .row:nth-child(1) {
-  height: 100vh;
   padding: 35px 0;
   margin: 0;
 }
@@ -337,6 +340,206 @@ input, textarea {
 }
 
 /* END OF ALL EXPENSES */
+
+
+/* QUICK INVOICE */
+
+#dashboard .mainContent .leftSide .quickInvoiceCard {
+  width: 100%;
+  margin-top: 25px;
+  height: min-content;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .header {
+  margin-bottom: 10px;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .header .title {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-600);
+  color: var(--blue);
+  margin-bottom: 0;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .header img {
+  width: 50px;
+  cursor: pointer;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction {
+  margin-bottom: 15px;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction .title {
+  font-size: var(--fs-5);
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+/* TRANSACTION LIST */
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction .list {
+  height: max-content;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--white-3);
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction .list ul {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction .list li {
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  width: 210px;
+  height: 70px;
+  background-color: var(--white-2);
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction .list ul, li {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction .list .card {
+  padding: 0;
+  height: 100%;
+  border: 0;
+  background-color: transparent;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction .list .card img {
+  width: 80%;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction .list .card p {
+  margin: 0;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction .list .card .username {
+  font-size: var(--fs-5);
+  color: var(--blue);
+  font-weight: var(--fw-600);
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction .list .card .email {
+  font-size: var(--fs-7);
+  color: var(--light-gray);
+}
+
+/* MONEY SEND FORM */
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm {
+  padding-top: 5px;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .row:nth-child(1) {
+  margin-bottom: 25px;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm label {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  color: var(--blue);
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .input {
+  border: 1px solid var(--white-2);
+  background-color: var(--white-2);
+  border-radius: 12px;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: var(--fs-6);
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .input:focus {
+  border: 1px solid var(--light-blue);
+  box-shadow: 0 0 0 transparent;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .btn-mount {
+  border: 1px solid var(--white-2);
+  background-color: var(--white-2);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding: 15px 15px;
+  font-size: var(--fs-6);
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .btn-mount:focus {
+  border: 1px solid var(--light-blue);
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .input-mount {
+  border: 1px solid var(--white-2);
+  background-color: var(--white-2);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-size: var(--fs-6);
+  padding: 15px 20px 15px 5px;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .input-mount:focus {
+  border: 1px solid var(--light-blue);
+  border-left: 0;
+  box-shadow: 0 0 0 transparent;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm ul li {
+  font-size: var(--fs-7);
+  cursor: pointer;
+
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm ul li:hover {
+  background-color: var(--primary);
+}
+
+/* BUTTON */
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .button {
+  margin-top: 20px;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .btn-addMore {
+  border-radius: 12px;
+  background-color: transparent;
+  width: 48%;
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  color: var(--light-blue);
+  padding: 15px;
+  border: 1px solid transparent;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .btn-addMore:hover {
+  border: 1px solid var(--light-blue);
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .btn-send {
+  border-radius: 12px;
+  background-color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+  width: 48%;
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  color: var(--white-2);
+  padding: 15px;
+}
+
+#dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .btn-send:hover {
+  border: 1px solid var(--light-blue-hover);
+  background-color: var(--light-blue-hover);
+}
+
+/* END OF QUICK INVOICE */
 /* END OF LEFT SIDE */
 
 /* *<---------- END OF MAIN CONTENT ---------->* */
