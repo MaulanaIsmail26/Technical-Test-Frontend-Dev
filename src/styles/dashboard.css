@@ -607,11 +607,20 @@ input, textarea {
   font-weight: var(--fw-600);
 }
 
-#dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .itemList .nominal {
+#dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .itemList .nominal-income , .nominal-expenses {
   font-size: var(--fs-3);
-  color: var(--mint);
   font-weight: var(--fw-600);
 }
+
+#dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .itemList .nominal-income {
+  color: var(--mint);
+}
+
+#dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .itemList .nominal-expenses {
+  color: var(--rose);
+}
+
+/* #dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .itemList .nominal */
 
 /* END OF RIGHT SIDE */
 
