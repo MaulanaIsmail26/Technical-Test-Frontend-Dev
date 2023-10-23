@@ -25,7 +25,7 @@ export default function Dashboard() {
               id: 1,
               name: "Lekan Okeowo",
               balance: { date: "April 2022", nominal: "Rp.65.000" },
-              income: { date: "February 2022", nominal: "100.000" },
+              income: { date: "February 2022", nominal: "Rp.90.000" },
               expenses: { date: "April 2022", nominal: "Rp.35.000" },
             },
           ],
@@ -49,7 +49,7 @@ export default function Dashboard() {
               transactionType: "income",
               information: "December Mobile App project",
               date: "13 December 2021",
-              nominal: "Rp.40.000",
+              nominal: "Rp.30.000",
             },
           ],
         };
@@ -132,10 +132,10 @@ export default function Dashboard() {
           </aside>
 
           {/* MAIN CONTENT */}
-          <main className="col-9 mainContent">
-            <div className="row">
+          <main className="col-sm-9 col-12 mainContent">
+            <div className="row p-0 py-sm-4">
               {/* LEFT SIDE */}
-              <div className="col-7 leftSide">
+              <div className="col-sm-7 col-12 leftSide">
                 {/* ALL EXPENSES CARD */}
                 <div className="AllExpensesCard">
                   {/* HEADER */}
@@ -172,7 +172,7 @@ export default function Dashboard() {
 
                   {/* CONTENT */}
                   <div className="row content">
-                    <div className="col-4">
+                    <div className="col-sm-4 col-6">
                       <CardExpenses
                         icon={
                           "https://res.cloudinary.com/duflagksy/image/upload/v1697961187/balance-icon_pwa7xa.webp"
@@ -182,7 +182,7 @@ export default function Dashboard() {
                         nominal={expenses[0]?.balance?.nominal}
                       />
                     </div>
-                    <div className="col-4">
+                    <div className="col-sm-4 col-6">
                       <CardExpenses
                         icon={
                           "https://res.cloudinary.com/duflagksy/image/upload/v1697961429/income-icon_cmqanx.webp"
@@ -192,7 +192,7 @@ export default function Dashboard() {
                         nominal={expenses[0]?.income?.nominal}
                       />
                     </div>
-                    <div className="col-4">
+                    <div className="col-sm-4 col-6 mt-sm-0 mt-4">
                       <CardExpenses
                         icon={
                           "https://res.cloudinary.com/duflagksy/image/upload/v1697961429/expenses-icon_nlpvre.webp"
@@ -244,7 +244,7 @@ export default function Dashboard() {
                   <div className="moneySendForm">
                     {/* FORM */}
                     <div className="row p-0">
-                      <div className="col-6">
+                      <div className="col-sm-6 col-12 mb-sm-0 mb-3 p-0 pe-sm-2">
                         <label for="name" className="form-label">
                           Customer name
                         </label>
@@ -255,7 +255,7 @@ export default function Dashboard() {
                           placeholder="Type customer name"
                         />
                       </div>
-                      <div className="col-6">
+                      <div className="col-sm-6 col-12 p-0 ps-sm-2">
                         <label for="email" className="form-label">
                           Customer Email
                         </label>
@@ -268,7 +268,7 @@ export default function Dashboard() {
                       </div>
                     </div>
                     <div className="row p-0 m-0">
-                      <div className="col-6">
+                      <div className="col-sm-6 col-12 mb-sm-0 mb-3 p-0 pe-sm-2">
                         <label for="item" className="form-label">
                           Item name
                         </label>
@@ -279,7 +279,7 @@ export default function Dashboard() {
                           placeholder="Type customer name"
                         />
                       </div>
-                      <div className="col-6">
+                      <div className="col-sm-6 col-12 p-0 ps-sm-2">
                         <label for="mount" className="form-label">
                           Item mount
                         </label>
@@ -308,7 +308,7 @@ export default function Dashboard() {
                     </div>
 
                     {/* BUTTON */}
-                    <div className="button d-flex justify-content-between">
+                    <div className="button mt-sm-4 mt-4 d-flex justify-content-between">
                       <button type="button" className="btn btn-addMore">
                         Add more details
                       </button>
@@ -321,7 +321,7 @@ export default function Dashboard() {
               </div>
 
               {/* RIGHT SIDE */}
-              <div className="col-5 rightSide">
+              <div className="col-sm-5 col-12 pt-4 pt-sm-0 rightSide">
                 {/* MY CARD SECTION */}
                 <div className="myCard">
                   <p className="title">My Card</p>

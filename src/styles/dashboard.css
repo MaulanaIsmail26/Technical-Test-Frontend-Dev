@@ -313,29 +313,29 @@ input, textarea {
   color: var(--light-blue);
 }
 
-#dashboard .mainContent .leftSide .AllExpensesCard .content .col-4:nth-child(1) .card {
+#dashboard .mainContent .leftSide .AllExpensesCard .content .col-sm-4:nth-child(1) .card {
   background-color: var(--light-blue);
   border: 0;
 }
 
-#dashboard .mainContent .leftSide .AllExpensesCard .content .col-4:nth-child(1) .card .card-header h6 {
+#dashboard .mainContent .leftSide .AllExpensesCard .content .col-sm-4:nth-child(1) .card .card-header h6 {
   color: var(--white);
 }
 
-#dashboard .mainContent .leftSide .AllExpensesCard .content .col-4:nth-child(1) .card .card-content p:nth-child(1) {
+#dashboard .mainContent .leftSide .AllExpensesCard .content .col-sm-4:nth-child(1) .card .card-content p:nth-child(1) {
   font-size: var(--fs-5);
   font-weight: var(--fw-600);
   color: var(--white);
   margin-bottom: 4px;
 }
 
-#dashboard .mainContent .leftSide .AllExpensesCard .content .col-4:nth-child(1) .card .card-content p:nth-child(2) {
+#dashboard .mainContent .leftSide .AllExpensesCard .content .col-sm-4:nth-child(1) .card .card-content p:nth-child(2) {
   color: var(--white-2);
   font-size: var(--fs-6);
   margin-bottom: 12px;
 }
 
-#dashboard .mainContent .leftSide .AllExpensesCard .content .col-4:nth-child(1) .card .card-content h4 {
+#dashboard .mainContent .leftSide .AllExpensesCard .content .col-sm-4:nth-child(1) .card .card-content h4 {
   color: var(--white);
 }
 
@@ -623,3 +623,89 @@ input, textarea {
 /* END OF RIGHT SIDE */
 
 /* *<---------- END OF MAIN CONTENT ---------->* */
+
+
+
+
+/* *\_______ RESPONSIVE FOR _______/ */
+/* *<----------- MOBILE -----------> */
+
+@media screen and (max-width:600px) {
+
+  /* SIDE BAR */
+  #dashboard .container-fluid .sideBar {
+    display: none;
+  }
+
+  /* MAIN CONTENT */
+  /* LEFT SIDE */
+  #dashboard .mainContent .leftSide {
+    padding: 0;
+  }
+
+  #dashboard .mainContent .leftSide .AllExpensesCard .header .btn-dropdown {
+    font-size: var(--fs-7);
+  }
+
+  #dashboard .mainContent .leftSide .AllExpensesCard {
+    border-radius: 0;
+  }
+
+  #dashboard .mainContent .leftSide .AllExpensesCard .content .card .card-header {
+    margin-bottom: 20px;
+  }
+
+  #dashboard .mainContent .leftSide .AllExpensesCard .content .card img {
+    width: 45px;
+  }
+
+  #dashboard .mainContent .leftSide .quickInvoiceCard .latestTransaction {
+    margin-bottom: 10px;
+  }
+
+  #dashboard .mainContent .leftSide .quickInvoiceCard {
+    border-radius: 0;
+  }
+
+  #dashboard .mainContent .leftSide .quickInvoiceCard .header img {
+    width: 40px;
+  }
+
+  #dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .row:nth-child(1) {
+    margin-bottom: 16px;
+  }
+
+  #dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .btn-addMore {
+    font-size: var(--fs-6);
+    padding: 10px;
+  }
+
+  #dashboard .mainContent .leftSide .quickInvoiceCard .moneySendForm .btn-send {
+    font-size: var(--fs-6);
+    padding: 10px;
+  }
+
+  /* RIGHT SIDE */
+
+  #dashboard .mainContent .rightSide {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #dashboard .mainContent .rightSide .myCard {
+    border-radius: 0;
+  }
+
+  #dashboard .mainContent .rightSide .myCard .transactionHistory .header {
+    height: 40px;
+    margin-top: 20px;
+  }
+
+  #dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .itemList {
+    margin-bottom: 15px;
+  }
+
+}
+
+/* *\_______ END OF RESPONSIVE FOR _______/ */
+/* *<--------------- MOBILE --------------> */
