@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import CardExpenses from "../components/molecules/card-Expenses";
 import TransactionList from "../components/molecules/transaction-list";
+import TransactionListItem from "../components/molecules/transactionList-item";
 
 export default function Dashboard() {
   return (
@@ -62,6 +63,7 @@ export default function Dashboard() {
           {/* MAIN CONTENT */}
           <main className="col-9 mainContent">
             <div className="row">
+              {/* LEFT SIDE */}
               <div className="col-7 leftSide">
                 {/* ALL EXPENSES CARD */}
                 <div className="AllExpensesCard">
@@ -242,6 +244,93 @@ export default function Dashboard() {
                       <button type="button" className="btn btn-send">
                         Send Money
                       </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT SIDE */}
+              <div className="col-5 rightSide">
+                {/* MY CARD SECTION */}
+                <div className="myCard">
+                  <p className="title">My Card</p>
+                  {/* USER CARD */}
+                  <div id="carouselExample" className="carousel slide">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img
+                          src={require("./../asset/icons/user-card.webp")}
+                          className="d-block w-100"
+                          alt="user-card"
+                        />
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src={require("./../asset/icons/user-card.webp")}
+                          className="d-block w-100"
+                          alt="user-card"
+                        />
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src={require("./../asset/icons/user-card.webp")}
+                          className="d-block w-100"
+                          alt="user-card"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      className="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carouselExample"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        className="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      className="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carouselExample"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        className="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+                  {/* TRANSACTION HISTORY */}
+                  <div className="transactionHistory">
+                    {/* HEADER */}
+                    <div className="header d-flex justify-content-between align-items-center">
+                      <p>Transaction History</p>
+                      <button>See all</button>
+                    </div>
+
+                    {/* TRANSACTION LIST */}
+                    <div className="transactionList">
+                      <p className="date">13 April 2022</p>
+                      <TransactionListItem
+                        name="Cash Withdrawal"
+                        date="13 Apr, 2022"
+                        nominal="$20,129"
+                      />
+                      <TransactionListItem
+                        name="Landing Page project"
+                        date="13 Apr, 2022 at 3:30 PM"
+                        nominal="$2,000"
+                      />
+                      <TransactionListItem
+                        name="Juni Mobile App project"
+                        date="13 Apr, 2022 at 3:30 PM"
+                        nominal="$20,129"
+                      />
                     </div>
                   </div>
                 </div>
