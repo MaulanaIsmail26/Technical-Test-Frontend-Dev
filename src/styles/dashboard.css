@@ -542,4 +542,77 @@ input, textarea {
 /* END OF QUICK INVOICE */
 /* END OF LEFT SIDE */
 
+
+/* RIGHT SIDE */
+
+#dashboard .mainContent .rightSide {
+  padding: 0 30px;
+}
+
+#dashboard .mainContent .rightSide .myCard {
+  width: 100%;
+  height: max-content;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+}
+
+#dashboard .mainContent .rightSide .myCard .title {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-600);
+  color: var(--blue);
+  align-self: stretch;
+  margin-bottom: 8px;
+}
+
+#dashboard .mainContent .rightSide .myCard .transactionHistory .header {
+  height: 50px;
+  margin-top: 10px;
+}
+
+#dashboard .mainContent .rightSide .myCard .transactionHistory .header p {
+  font-size: 20px;
+  color: var(--blue);
+  font-weight: var(--fw-600);
+  margin-bottom: 0;
+}
+
+#dashboard .mainContent .rightSide .myCard .transactionHistory .header button {
+  font-size: 16px;
+  color: var(--light-blue);
+  font-weight: var(--fw-500);
+  border: 0;
+  background: transparent;
+}
+
+#dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .date {
+  font-size: var(--fs-5);
+  color: var(--light-gray);
+}
+
+#dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .itemList {
+  border-radius: 12px;
+  background-color: var(--white-2);
+  padding: 16px;
+  margin-bottom: 10px;
+}
+
+#dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .itemList p {
+  margin-bottom: 0;
+}
+
+#dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .itemList .name {
+  font-size: var(--fs-5);
+  color: var(--blue);
+  font-weight: var(--fw-600);
+}
+
+#dashboard .mainContent .rightSide .myCard .transactionHistory .transactionList .itemList .nominal {
+  font-size: var(--fs-3);
+  color: var(--mint);
+  font-weight: var(--fw-600);
+}
+
+/* END OF RIGHT SIDE */
+
 /* *<---------- END OF MAIN CONTENT ---------->* */
