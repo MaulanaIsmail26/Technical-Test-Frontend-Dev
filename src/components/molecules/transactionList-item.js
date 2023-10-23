@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 
 export default function TransactionListItem(props) {
-  const { name, date, nominal } = props;
+  const { name, date, nominal, transactionType } = props;
 
   return (
     <div className="itemList d-flex justify-content-between align-items-center">
@@ -9,7 +10,7 @@ export default function TransactionListItem(props) {
         <p className="name">{name}</p>
         <p className="date">{date}</p>
       </div>
-      <div className="nominal">{nominal}</div>
+      <p className={transactionType === "income" ? "nominal-income" : "nominal-expenses"}>{nominal}</p>
     </div>
   );
 }

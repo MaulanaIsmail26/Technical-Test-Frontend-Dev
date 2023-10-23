@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./../styles/dashboard.css";
+import axios from "axios";
+import { createServer } from "miragejs";
 import { Link } from "react-router-dom";
 
 import CardExpenses from "../components/molecules/card-Expenses";
@@ -8,6 +10,75 @@ import TransactionList from "../components/molecules/transaction-list";
 import TransactionListItem from "../components/molecules/transactionList-item";
 
 export default function Dashboard() {
+  const [expenses, setExpenses] = React.useState([]);
+  const [transaction, setTransaction] = React.useState([]);
+
+  // CREATING A FAKE DATABASE
+  createServer({
+    routes() {
+      this.namespace = "api";
+
+      this.get("/user", () => {
+        return {
+          expenses: [
+            {
+              id: 1,
+              name: "Lekan Okeowo",
+              balance: { date: "April 2022", nominal: "Rp.65.000" },
+              income: { date: "February 2022", nominal: "100.000" },
+              expenses: { date: "April 2022", nominal: "Rp.35.000" },
+            },
+          ],
+          transaction: [
+            {
+              id: 1,
+              transactionType: "expenses",
+              information: "Cash Withdrawal",
+              date: "13 April 2022",
+              nominal: "Rp.35.000",
+            },
+            {
+              id: 2,
+              transactionType: "income",
+              information: "Landing Page project",
+              date: "13 February 2022",
+              nominal: "Rp.60.000",
+            },
+            {
+              id: 3,
+              transactionType: "income",
+              information: "December Mobile App project",
+              date: "13 December 2021",
+              nominal: "Rp.40.000",
+            },
+          ],
+        };
+      });
+    },
+  });
+
+  // GET EXPENSES
+  React.useEffect(() => {
+    axios
+      .get(`/api/user`)
+      .then(({ data }) => {
+        setExpenses(data?.expenses);
+      })
+      .catch((err) => setExpenses([]))
+      .finally(() => {});
+  }, []);
+
+  // GET TRANSACTION HISTORY
+  React.useEffect(() => {
+    axios
+      .get(`/api/user`)
+      .then(({ data }) => {
+        setTransaction(data?.transaction);
+      })
+      .catch((err) => setTransaction([]))
+      .finally(() => {});
+  }, []);
+
   return (
     <div id="dashboard">
       <div className="container-fluid">
@@ -107,8 +178,8 @@ export default function Dashboard() {
                           "https://res.cloudinary.com/duflagksy/image/upload/v1697961187/balance-icon_pwa7xa.webp"
                         }
                         title="Balance"
-                        date="April 2022"
-                        nominal="$20,129"
+                        date={expenses[0]?.balance?.date}
+                        nominal={expenses[0]?.balance?.nominal}
                       />
                     </div>
                     <div className="col-4">
@@ -117,8 +188,8 @@ export default function Dashboard() {
                           "https://res.cloudinary.com/duflagksy/image/upload/v1697961429/income-icon_cmqanx.webp"
                         }
                         title="Income"
-                        date="April 2022"
-                        nominal="$20,129"
+                        date={expenses[0]?.income?.date}
+                        nominal={expenses[0]?.income?.nominal}
                       />
                     </div>
                     <div className="col-4">
@@ -127,8 +198,8 @@ export default function Dashboard() {
                           "https://res.cloudinary.com/duflagksy/image/upload/v1697961429/expenses-icon_nlpvre.webp"
                         }
                         title="Expenses"
-                        date="April 2022"
-                        nominal="$20,129"
+                        date={expenses[0]?.expenses?.date}
+                        nominal={expenses[0]?.expenses?.nominal}
                       />
                     </div>
                   </div>
@@ -315,22 +386,17 @@ export default function Dashboard() {
 
                     {/* TRANSACTION LIST */}
                     <div className="transactionList">
-                      <p className="date">13 April 2022</p>
-                      <TransactionListItem
-                        name="Cash Withdrawal"
-                        date="13 Apr, 2022"
-                        nominal="$20,129"
-                      />
-                      <TransactionListItem
-                        name="Landing Page project"
-                        date="13 Apr, 2022 at 3:30 PM"
-                        nominal="$2,000"
-                      />
-                      <TransactionListItem
-                        name="Juni Mobile App project"
-                        date="13 Apr, 2022 at 3:30 PM"
-                        nominal="$20,129"
-                      />
+                      <p className="date">{transaction[0]?.date}</p>
+                      {transaction.map((item, key) => {
+                        return (
+                          <TransactionListItem
+                            name={item?.information}
+                            date={item?.date}
+                            nominal={item?.nominal}
+                            transactionType={item?.transactionType}
+                          />
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
